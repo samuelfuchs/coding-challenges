@@ -26,6 +26,10 @@ body {
 
 .container {
 	padding: 20px;
+	display: grid;
+	grid-template-areas:
+		'first first second right'
+		'2first 2second 2second right';
 }
 
 .card {
@@ -39,19 +43,27 @@ img {
 
 .testi-1 {
 	background-color: var(--moderate-violet);
+	grid-area: first;
 }
 
 .testi-2 {
 	background-color: var(--very-dark-gray);
+	grid-area: second;
 }
 
-.testi-3,
-.testi-5 {
+.testi-3 {
 	background-color: var(--white);
+	grid-area: 2first;
 }
 
 .testi-4 {
 	background-color: var(--very-dark-blue);
+	grid-area: 2second;
+}
+
+.testi-5 {
+	background-color: var(--white);
+	grid-area: right;
 }
 
 /* Media Queries: 375px (mobile) / 1440px (Desktop) */
