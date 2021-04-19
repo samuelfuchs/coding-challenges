@@ -13,79 +13,52 @@
     as well, but are at 70% opacity */
 }
 
-html,
-body {
-	height: 100%;
-	padding: 0;
+* {
 	margin: 0;
-
+	padding: 0;
+	box-sizing: border-box;
 	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-size: 13px;
-	background-color: var(--light-gray);
 }
 
-.container {
+body {
 	display: grid;
-	grid-template-areas:
-		'first first second right'
-		'twofirst twosecond twosecond right';
-	grid-gap: 10px;
-	padding: 20px;
+	place-items: center;
+	background-color: var(--light-blue);
+	font-size: 13px;
+	color: var(--white);
+	height: 100vh;
+	width: 100%;
+}
+
+main {
+	display: grid;
+	gap: 2em;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 80%;
+	text-align: left;
+}
+
+.wide {
+	grid-column-end: span 2;
+}
+
+.tall {
+	grid-row-end: span 2;
+}
+
+.row {
+	display: flex;
+	text-align: left;
 }
 
 .card {
-	background: lightcoral;
-	border-radius: 6px;
-	padding: 30px 40px;
-}
-
-img {
-	border-radius: 50%;
-	float: left;
-	margin-right: 20px;
-}
-
-.testi-1 {
+	padding: 1.5rem;
+	height: auto;
+	border-radius: 0.5em;
 	background-color: var(--moderate-violet);
-	grid-area: first;
 }
 
-.testi-2 {
-	background-color: var(--very-dark-gray);
-	grid-area: second;
+.heading {
+	margin: 1em 1em 1em 0;
 }
-
-.testi-3 {
-	background-color: var(--white);
-	grid-area: twofirst;
-}
-
-.testi-4 {
-	background-color: var(--very-dark-blue);
-	grid-area: twosecond;
-}
-
-.testi-5 {
-	background-color: var(--white);
-	grid-area: right;
-}
-
-.white-text .name {
-	color: var(--white);
-}
-
-.white-text .ver-grad {
-	color: var(--white);
-	opacity: 50%;
-}
-
-.white-text h1 {
-	color: var(--white);
-}
-
-.white-text p {
-	color: var(--white);
-	opacity: 70%;
-}
-
-/* Media Queries: 375px (mobile) / 1440px (Desktop) */
