@@ -25,11 +25,12 @@ body {
 }
 
 .container {
-	padding: 20px;
 	display: grid;
 	grid-template-areas:
 		'first first second right'
-		'2first 2second 2second right';
+		'twofirst twosecond twosecond right';
+	grid-gap: 10px;
+	padding: 20px;
 }
 
 .card {
@@ -53,12 +54,12 @@ img {
 
 .testi-3 {
 	background-color: var(--white);
-	grid-area: 2first;
+	grid-area: twofirst;
 }
 
 .testi-4 {
 	background-color: var(--very-dark-blue);
-	grid-area: 2second;
+	grid-area: twosecond;
 }
 
 .testi-5 {
