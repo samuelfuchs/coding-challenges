@@ -6,11 +6,6 @@
 
 	--light-gray: hsl(0, 0%, 81%);
 	--light-blue: hsl(210, 46%, 95%);
-
-	/* 1. "Verified Graduate" has the same color as the person's 
-    name with 50% opacity
-    2. Review paragraphs inside the quotations have the same color 
-    as well, but are at 70% opacity */
 }
 
 * {
@@ -120,7 +115,13 @@ main {
 }
 
 /* media queries */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+		padding: 2rem 0;
+	}
+}
+@media only screen and (max-width: 555px) {
 	main {
 		grid-template-columns: 1fr;
 		padding: 5rem 0;
