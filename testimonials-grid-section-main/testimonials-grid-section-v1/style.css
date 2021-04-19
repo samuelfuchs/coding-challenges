@@ -36,10 +36,13 @@ body {
 .card {
 	background: lightcoral;
 	border-radius: 6px;
+	padding: 30px 40px;
 }
 
 img {
 	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
 }
 
 .testi-1 {
@@ -65,6 +68,24 @@ img {
 .testi-5 {
 	background-color: var(--white);
 	grid-area: right;
+}
+
+.white-text .name {
+	color: var(--white);
+}
+
+.white-text .ver-grad {
+	color: var(--white);
+	opacity: 50%;
+}
+
+.white-text h1 {
+	color: var(--white);
+}
+
+.white-text p {
+	color: var(--white);
+	opacity: 70%;
 }
 
 /* Media Queries: 375px (mobile) / 1440px (Desktop) */
