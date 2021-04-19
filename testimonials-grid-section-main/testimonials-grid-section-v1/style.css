@@ -5,7 +5,7 @@
 	--white: hsl(0, 0%, 100%);
 
 	--light-gray: hsl(0, 0%, 81%);
-	-light-blue: hsl(210, 46%, 95%);
+	--light-blue: hsl(210, 46%, 95%);
 
 	/* 1. "Verified Graduate" has the same color as the person's 
     name with 50% opacity
@@ -15,8 +15,43 @@
 
 html,
 body {
-	font-family: 'Barlow Semi Condensed';
+	height: 100%;
+	padding: 0;
+	margin: 0;
+
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-size: 13px;
+	background-color: var(--light-gray);
+}
+
+.container {
+	padding: 20px;
+}
+
+.card {
+	background: lightcoral;
+	border-radius: 6px;
+}
+
+img {
+	border-radius: 50%;
+}
+
+.testi-1 {
+	background-color: var(--moderate-violet);
+}
+
+.testi-2 {
+	background-color: var(--very-dark-gray);
+}
+
+.testi-3,
+.testi-5 {
+	background-color: var(--white);
+}
+
+.testi-4 {
+	background-color: var(--very-dark-blue);
 }
 
 /* Media Queries: 375px (mobile) / 1440px (Desktop) */
