@@ -1,32 +1,142 @@
-/* Table of contents
- 1. Global Styles
+:root {
+	--violet: hsl(263, 55%, 52%);
+	--dark-gray: hsl(217, 19%, 35%);
+	--dark-blue: hsl(219, 29%, 14%);
+	--white: hsl(0, 0%, 100%);
 
- 2. Typography
+	--light-gray: hsl(0, 0%, 81%);
+	--light-blue: hsl(210, 46%, 95%);
+}
 
- 3. Layout
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
 
- 4. Components
-    4.1 Cards
-    4.2 Buttons
+body {
+	display: grid;
+	place-items: center;
+	background-color: var(--light-blue);
+	font-size: 13px;
+	color: var(--white);
+	height: 100vh;
+	width: 100%;
+}
 
-*/
+main {
+	display: grid;
+	gap: 2em;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 80%;
+	text-align: left;
+}
 
-/*  ==============
-1.  Global Styles 
-    ============== */
+.col-2 {
+	grid-column-end: span 2;
+}
 
-/*  ==============
-2.  Typography 
-    ============== */
+.row-2 {
+	grid-row-end: span 2;
+}
 
-/*  ==============
-3.  Layout 
-    ============== */
+.row {
+	display: flex;
+	text-align: left;
+}
 
-/*  ==============
-4.  Components 
-    ============== */
+.row:nth-child(2) {
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 1em;
+}
 
-/* Cards */
+.row img:not(.quote) {
+	height: 3em;
+	width: 3em;
+	margin-right: 1em;
+	border: 2px solid var(--white);
+	border-radius: 50%;
+}
 
-/* Buttons */
+.card {
+	padding: 1.5rem;
+	height: auto;
+	border-radius: 0.5em;
+	background-color: var(--violet);
+}
+
+.card:nth-child(2) {
+	background-color: var(--dark-gray);
+}
+
+.card:nth-child(5) {
+	background-color: var(--dark-blue);
+}
+
+.card:nth-child(5) > .row img {
+	border: 2px solid var(--violet);
+}
+
+.white {
+	background-color: var(--white);
+	color: var(--dark-blue);
+}
+
+.heading {
+	margin: 1em 1em 1em 0;
+	z-index: 2;
+}
+
+.verified {
+	opacity: 50%;
+	letter-spacing: 1px;
+	margin-top: 0.2rem;
+}
+
+.testimony {
+	opacity: 60%;
+	line-height: 1.5;
+}
+
+.quote-container {
+	position: relative;
+}
+
+.quote {
+	position: absolute;
+	top: 0;
+	right: 22%;
+	opacity: 70%;
+	height: 110px;
+	z-index: 1;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+		padding: 2rem 0;
+	}
+}
+@media only screen and (max-width: 555px) {
+	main {
+		grid-template-columns: 1fr;
+		padding: 5rem 0;
+		width: 90%;
+	}
+	.quote {
+		right: 10%;
+	}
+	.col-2 {
+		grid-column-end: span 1;
+	}
+	.row-2 {
+		grid-row: 5;
+	}
+	.heading {
+		margin-right: 0.5em;
+	}
+}
