@@ -118,3 +118,24 @@ main {
 	height: 110px;
 	z-index: 1;
 }
+
+/* media queries */
+@media only screen and (max-width: 375px) {
+	main {
+		grid-template-columns: 1fr;
+		padding: 5rem 0;
+		width: 90%;
+	}
+	.qoute {
+		right: 10%;
+	}
+	.wide {
+		grid-column-end: span 1;
+	}
+	.tall {
+		grid-row: 5;
+	}
+	.heading {
+		margin-right: 0.5em;
+	}
+}
