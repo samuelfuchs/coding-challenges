@@ -52,6 +52,20 @@ main {
 	text-align: left;
 }
 
+.row:nth-child(2) {
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 1em;
+}
+
+.row img:not(.qoute) {
+	height: 3em;
+	width: 3em;
+	margin-right: 1em;
+	border: 2px solid var(--white);
+	border-radius: 50%;
+}
+
 .card {
 	padding: 1.5rem;
 	height: auto;
@@ -59,6 +73,48 @@ main {
 	background-color: var(--moderate-violet);
 }
 
+.card:nth-child(2) {
+	background-color: var(--very-dark-gray);
+}
+
+.card:nth-child(5) {
+	background-color: var(--very-dark-blue);
+}
+
+.card:nth-child(5) > .row img {
+	border: 2px solid var(--moderate-violet);
+}
+
+.white {
+	background-color: var(--white);
+	color: var(--very-dark-blue);
+}
+
 .heading {
 	margin: 1em 1em 1em 0;
+	z-index: 2;
+}
+
+.designation {
+	opacity: 50%;
+	letter-spacing: 1px;
+	margin-top: 0.2rem;
+}
+
+.testimony {
+	opacity: 60%;
+	line-height: 1.5;
+}
+
+.qholder {
+	position: relative;
+}
+
+.qoute {
+	position: absolute;
+	top: 0;
+	right: 22%;
+	opacity: 70%;
+	height: 110px;
+	z-index: 1;
 }
