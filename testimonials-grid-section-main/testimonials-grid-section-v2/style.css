@@ -1,3 +1,4 @@
+/* Global Settings */
 :root {
 	--violet: hsl(263, 55%, 52%);
 	--dark-gray: hsl(217, 19%, 35%);
@@ -19,7 +20,7 @@ body {
 	display: grid;
 	place-items: center;
 	background-color: var(--light-blue);
-	font-size: 13px;
+	font-size: 10px;
 	color: var(--white);
 	height: 100vh;
 	width: 100%;
@@ -30,7 +31,7 @@ main {
 	gap: 2em;
 	grid-template-rows: auto auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	width: 80%;
+	width: 100%;
 	text-align: left;
 }
 
@@ -60,7 +61,7 @@ main {
 	border: 2px solid var(--white);
 	border-radius: 50%;
 }
-
+/* Cards */
 .card {
 	padding: 1.5rem;
 	height: auto;
@@ -99,6 +100,13 @@ main {
 .testimony {
 	opacity: 60%;
 	line-height: 1.5;
+	font-size: 0.7rem;
+}
+
+.attribution {
+	bottom: 0;
+	position: fixed;
+	color: #000;
 }
 
 .quote-container {
@@ -115,10 +123,15 @@ main {
 }
 
 /* media queries */
+@media only screen and (min-width: 901px) {
+	main {
+		padding: 4rem 9rem;
+	}
+}
 @media only screen and (max-width: 900px) {
 	main {
 		grid-template-columns: 1fr 1fr;
-		padding: 2rem 0;
+		padding: 2rem;
 	}
 }
 @media only screen and (max-width: 555px) {
