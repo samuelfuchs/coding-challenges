@@ -84,6 +84,7 @@ main {
 .white {
 	background-color: var(--white);
 	color: var(--dark-blue);
+	box-shadow: 5px 9px 12px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
@@ -104,9 +105,26 @@ main {
 }
 
 .attribution {
+	width: 100%;
 	bottom: 0;
+	padding: 0.1rem;
+	z-index: 3;
+	text-align: center;
 	position: fixed;
-	color: #000;
+	color: var(--light-gray);
+	background-color: var(--dark-gray);
+}
+
+.attribution a:link,
+.attribution a:visited {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.attribution a:hover,
+.attribution a:active {
+	text-decoration: none;
+	color: var(--dark-blue);
 }
 
 .quote-container {
