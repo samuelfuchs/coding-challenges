@@ -51,6 +51,22 @@ sections
 /* ====
 navigation
 ==== */
+ul,
+li {
+	list-style: none;
+}
+li input {
+	display: none;
+}
+ul:not(:focus) input:not(:checked),
+ul:not(:focus) input:not(:checked) + label {
+	display: none;
+}
+
+input:checked + label {
+	color: red;
+}
+
 .nav-top-of-site {
 }
 .nav-top-of-site ul {
