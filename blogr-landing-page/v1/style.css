@@ -118,6 +118,9 @@ navigation
 }
 
 /* specific to non IE browsers */
+.menu {
+	display: flex;
+}
 .menu ul li:hover a {
 	color: #fff;
 	background: #36f;
