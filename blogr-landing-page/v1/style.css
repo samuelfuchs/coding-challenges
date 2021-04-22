@@ -51,43 +51,20 @@ sections
 /* ====
 navigation
 ==== */
-
-/* 
-.menu ul {
-	list-style: none;
-	float: left;
-	position: relative;
-}
-.menu ul li a,
-.menu ul li a:visited {
-	font-size: 20px;
-	height: 25px;
-	display: block;
-	text-decoration: none;
-	color: #000;
-	width: 104px;
-	text-align: center;
-	border: 1px solid #fff;
-	background: #710069;
-	overflow: hidden;
-}
-.menu ul li ul {
-	display: none;
-}
-
-.menu ul li {
-	float: left;
-	position: relative;
-} */
-
 /* common styling */
+.menu-right {
+	background-color: red;
+}
+
 .menu {
-	font-family: arial, sans-serif;
-	width: 750px;
-	height: 100px;
+	display: flex;
 	position: relative;
+	width: 100%;
+	height: 100px;
 	font-size: 11px;
-	z-index: 100;
+	z-index: 1;
+	justify-content: space-between;
+	transition: all 0.3s ease-in-out;
 }
 .menu ul li a,
 .menu ul li a:visited {
@@ -104,6 +81,11 @@ navigation
 	font-size: 11px;
 	overflow: hidden;
 }
+
+.menu ul li:hover a {
+	color: #fff;
+	background: #36f;
+}
 .menu ul {
 	padding: 0;
 	margin: 0;
@@ -116,15 +98,6 @@ navigation
 .menu ul li ul {
 	display: none;
 }
-
-/* specific to non IE browsers */
-.menu {
-	display: flex;
-}
-.menu ul li:hover a {
-	color: #fff;
-	background: #36f;
-}
 .menu ul li:hover ul {
 	display: block;
 	position: absolute;
@@ -132,6 +105,9 @@ navigation
 	left: 0;
 	width: 105px;
 }
+
+/* specific to non IE browsers */
+
 .menu ul li:hover ul li a.hide {
 	background: #6a3;
 	color: #fff;
