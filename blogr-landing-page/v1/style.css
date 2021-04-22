@@ -29,17 +29,39 @@
 	--bg-grad-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html,
 body {
 	font-size: 16px;
 	font-family: 'Ubuntu', sans-serif;
 }
 
+/* ====
+sections
+==== */
+.section-hero {
+	height: 100vh;
+}
+
+/* ====
+navigation
+==== */
+.nav-top-of-site {
+}
+.nav-top-of-site ul {
+}
+.nav-top-of-site li {
+	list-style: none;
+}
+
 /* 
 - Mobile: 375px
 - Desktop: 1440px
-
-### Gradient
 
 ### Fonts
 
@@ -48,10 +70,4 @@ body {
 
 - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
 - Weights: 400, 500, 700
-
-
-
-
-
-
 */
